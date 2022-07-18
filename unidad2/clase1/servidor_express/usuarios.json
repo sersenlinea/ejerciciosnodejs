@@ -1,0 +1,30 @@
+[
+    {
+        "id": 1,
+        "nombre": "Carolina",
+        "apellido": "Fuentes",
+        "edad": 31,
+        "password": "123!"
+    },
+    {
+        "id": 2,
+        "nombre": "Ramón",
+        "apellido": "Lugano",
+        "edad": 21,
+        "password": "lugan!"
+    },
+    {
+        "id": 3,
+        "nombre": "Santiago",
+        "apellido": "Alvárez",
+        "edad": 33,
+        "password": "Snati!"
+    },
+    {
+        "id": 4,
+        "nombre": "Julían",
+        "apellido": "Oropeza",
+        "edad": 41,
+        "password": "juli3!"
+    }
+]

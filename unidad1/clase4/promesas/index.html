@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Api pública</title>
+    <script>
+        const traerData=async()=>{
+// fetch('./datos.json')
+fetch('https://openlibrary.org/api/books?bibkeys=ISBN:9780980200447&jscmd=details&format=json')
+.then((data=>{
+    console.log(data);
+    return data.json()}))
+.then(data=>console.log(data))
+.catch(error=>console.log(error)) 
+}
+traerData()
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
