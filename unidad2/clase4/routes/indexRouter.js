@@ -1,17 +1,16 @@
 const express = require('express');
 const router = express.Router();
 
-// Ejemplo número 1.
-router.get('/', function (req, res) {
+router.get('/', (req, res)=> {
   res.send('home page');
 })
-
-// Ejemplo número 2.
-router.post('/activity', function (req, res) {
-  res.send('created user');
+router.post('/', (req, res)=> {
+  res.send(req.body);
 })
-// Ejemplo número 3.
-router.put('/home/section1', function (req, res) {
-  res.send('modify user');
+router.put('/',(req,res)=>{
+  res.send({user:req.query.user,password:req.query.password})
+})
+router.delete('/',(req,res)=>{
+  res.send({id:req.params.id})
 })
 module.exports = router;
