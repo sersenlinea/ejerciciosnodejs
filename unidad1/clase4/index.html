@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+       fetch('https://pruebagcd.herokuapp.com/hoteles')
+  .then(response => response.json())
+  .then(data => console.log(data));
+
+  const getOne=(id)=>{
+    fetch('https://pruebagcd.herokuapp.com/hoteles')
+    .then(response => response.json())
+    .then(data => {
+      return data
+    })
+    .then((d)=>{
+    let dat =  d.filter(data=>data.id===id);
+       console.log(dat);
+    })
+  }
+ console.log(getOne(1));
+    </script>
+</body>
+</html>
