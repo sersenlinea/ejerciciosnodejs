@@ -1,0 +1,14 @@
+[
+    {
+        "nombre": "Mariana",
+        "apellido":"Romero",
+        "email": "romari@gmail.com",
+        "direccion": "Av. Juan B justo 550, B1057 Balvanera, CABA",
+        "telefono": "011 4694-3605",
+        "cursos":[],
+        "activo":true,
+        "id": 1,
+        "password":"125896"
+    }
+ ]
+ 

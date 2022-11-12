@@ -1,0 +1,19 @@
+[
+    {
+        "nombre": "Juan",
+        "apellido":"Mendoza",
+        "email": "juandoza@gmail.com",
+        "direccion": "Av. 9 de Julio 1550, B7167 Pinamar, Provincia de Buenos Aires",
+        "telefono": "011 4694-9605",
+        "cursos": [
+            {
+            "title":"Web I",
+            "avance":1,
+            "activo":true
+            }
+        ],
+        "id": 1,
+        "password":"125896"
+    }
+ ]
+ 
