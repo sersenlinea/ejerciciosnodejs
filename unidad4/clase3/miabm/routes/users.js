@@ -1,9 +1,8 @@
 var express = require('express');
 var router = express.Router();
-
-/* GET users listing. */
-router.get('/', function(req, res, next) {
-  res.send('respond with a resource');
-});
+const userController = require('../controllers/usersController')
+router.post('/alumnos', userController.alumnos);
+router.post('/docentes', userController.docentes);
+router.post('/admin', userController.admin);
 
 module.exports = router;
