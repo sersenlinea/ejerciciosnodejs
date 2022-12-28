@@ -1,7 +1,5 @@
 // import logo from './logo.svg';
-// import { useState } from 'react';
-// import { useState } from 'react';
-// import './App.css';
+// import { useState } from 'react';// import './App.css';
 // import Home from './clase1/Home'
 // import { useState,useRef } from 'react';
 
@@ -379,7 +377,23 @@ const App=()=>{
 }
 
 export default App;*/
+/*
+import Formik from './unidadIV/clase3/Formik'
 
+const App=()=>{
+  let initialValues = {
+    accountType:"personal"
+  }
+  const onSubmit=()=>{
+    alert()
+  }
+  return(
+    <Formik initialValues={initialValues} onSubmit={onSubmit}/>
+  )
+}
+
+export default App;
+*/
 //Unidad V
 // clase 1
 /*
@@ -393,12 +407,14 @@ const App=()=>{
 export default App;
 */
 //clase 2
-
+/*
 import Button from './unidadV/clase2/Button'
 import Home from './unidadV/clase2/Home'
 import Template from './unidadV/clase2/Template'
 import {useState} from 'react'
-const App=()=>{
+export default function App(){
+ 
+
   const [view,setView]=useState(true);
   const cambiarPagina=()=>{
     setView(view?false:true)
@@ -409,9 +425,112 @@ const App=()=>{
     {view?<Home/>:<Template/>}
   </div>)
 }
-export default App;
 
 
+*/
+//clase 3 
+
+/*
+import Dog from './unidadIV/clase3/formikBasico'
+
+export default function App(){
+
+  return(
+    <div>
+      <Dog/>
+    </div>
+  )
+}
+*/
+//clase 4
+/*
+import CharactersList from './unidadV/clase4/CharactersList'
+
+export default function App(){
+
+  return(
+    <div>
+      <CharactersList/>
+    </div>
+  )
+}
+*/
+
+//clase 5
+/*
+import UserList from './unidadV/clase5/UserList'
+import ListNumbers from './unidadV/clase5/ListNumber'
+import { createTheme, ThemeProvider } from '@mui/material/styles';
+import {Container,Grid, Box,CssBaseline} from '@mui/material';
+import {useState} from 'react'
+export default function App(){
+  let data =[
+    {id: 12345,
+      name:"Luis Navas",
+      email:"lpipnavas@gmail.com", 
+      src:"https://pbs.twimg.com/profile_images/484370751361781761/tgq1CPGP_400x400.jpeg"},
+    {id: 12346,
+      name:"Luciana Alvarez",
+      email:"lualvarez@gmail.com",
+      src:"https://pbs.twimg.com/profile_images/2168022144/IMG01098-20120221-0816_400x400.jpg"},
+    {id: 12347,
+      name:"Juan Oropeza",
+      email:"pezajuan@gmail.com",
+      src:"https://alchetron.com/cdn/juan-oropeza-fcdea8db-5179-4603-8c35-b2662b7ab40-resize-750.jpeg"},
+    {id: 12348,
+      name:"Julián Pérez",
+      email:"pjuli@gmail.com",
+      src:"https://i1.sndcdn.com/avatars-000690548765-srqy7t-t500x500.jpg"},
+    {id: 12349,
+      name:"Carmen Sanabria",
+      email:"carmens22@gmail.com",
+      src:"https://acordesweb.com/img/carmen-sanabria-a3d4f33f37e0bf747a465a2829899049.jpg"},
+    {id: 12350,
+      name:"Antonio Guzmán",
+      email:"aguzman19@gmail.com",
+      src:"https://piel-l.org/blog/wp-content/uploads//2020/10/dr-fawcet.jpg"}
+  ]
+  
+  const [users,setUsers]=useState(data)
+  const handleDelete=(id)=>{
+    let newUsers = users.filter(u=>u.id!==id)
+    setUsers(newUsers);
+    data=users
+  }
+  const theme = createTheme();
+  return(
+    <ThemeProvider theme={theme}>
+      <CssBaseline />
+      <Box
+          sx={{
+            bgcolor: 'background.secondary',
+            pt: 8,
+            pb: 6,
+          }}
+        >
+       <Container sx={{ py: 2 }} maxWidth="md">
+       <Grid container spacing={2}>
+      <UserList users={users} handleDelete={handleDelete}/>
+      </Grid>
+      </Container>
+      </Box>
+    </ThemeProvider>
+    
+  )
+}
+*/
+
+// Clase 6
+import UserList from './unidadV/clase6/ListUsers'
+export default function App(){ 
+  let numbers = [3,19,52,47,58,614,21,66,8881,64,4];
+  return(
+    <UserList>
+  {numbers}
+</UserList>
+  )
+
+}
 
 /*
 const App=()=>{

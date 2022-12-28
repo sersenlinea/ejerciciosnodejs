@@ -29,7 +29,7 @@ function Copyright() {
   );
 }
 
-const cards = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+
 
 const theme = createTheme();
 
@@ -102,8 +102,7 @@ export default function Album() {
                       Heading
                     </Typography>
                     <Typography>
-                      This is a media card. You can use this section to describe the
-                      content.
+                      Acá va a ir la descripción del contenido.
                     </Typography>
                   </CardContent>
                   <CardActions>
