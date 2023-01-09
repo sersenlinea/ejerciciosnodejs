@@ -4,6 +4,7 @@ const { createToken, verifyToken } = require('../utils/jwt');
 const db = require('../models');
 module.exports = {
     login: async (req, res) => {
+        console.log(req.body);
         const errors = validationResult(req);
         if (!errors.isEmpty()) {
             return res.status(400).json({
@@ -43,6 +44,7 @@ module.exports = {
 
     },
     signup: async (req, res) => {
+        console.log(req.body);
         const errors = validationResult(req);
         if (!errors.isEmpty()) {
             return res.status(400).json({
@@ -63,7 +65,7 @@ module.exports = {
                         apellido: req.body.apellido,
                         email: req.body.email,
                         password: bcrypt.hashSync(req.body.password, 10),
-                        rol: "no admin"
+                        rol:req.body.rol
                     })
 
                         .then(async (user) => {
@@ -100,7 +102,8 @@ module.exports = {
             });
     },
     userEdit: (req, res) => {
-        const errors = validationResult(req);
+        console.log(req.body);
+      const errors = validationResult(req);
         if (!errors.isEmpty()) {
             res.status(400).json({
                 errors: errors.array(),
@@ -110,6 +113,7 @@ module.exports = {
                 nombre, apellido, rol
             } = req.body;
             const user = db.Users.findByPk(req.params.id);
+          
             if (user !== '') {
                 db.Users.update(
                     {
